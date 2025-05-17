@@ -1,0 +1,12 @@
+📂 Структура проекта:
+
+mybot/
+├── bot.py
+├── handlers/
+│   └── start.py
+├── database/
+│   ├── db.py
+│   └── models.py
+├── keyboards/
+│   └── main.py
+└── config.py
