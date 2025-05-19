@@ -85,5 +85,10 @@ async def process_new_password(message: types.Message, state: FSMContext):
     if success:
         await message.answer("✅ Регистрация успешна! Теперь войдите в аккаунт.", reply_markup=None)
     else:
-        await message.answer("❌ Ошибка регистрации. Попробуйте другой логин.")
+        # Проверяем, есть ли уже пользователь с этим telegram_id
+        user = db.get_user_by_telegram_id(message.from_user.id)
+        if user:
+            await message.answer("❌ У вас уже есть аккаунт.")
+        else:
+            await message.answer("❌ Ошибка регистрации. Попробуйте другой логин.")
     await state.clear()

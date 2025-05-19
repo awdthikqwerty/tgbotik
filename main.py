@@ -17,6 +17,7 @@ from handlers.auth import auth_router
 from handlers.tiktok import tiktok_router
 from handlers.admin import admin_router
 from handlers.weather import weather_router
+from handlers.rating import rating_router
 from keyboards.auth_menu import auth_menu_keyboard
 
 async def main():
@@ -25,6 +26,7 @@ async def main():
 
     dp.include_router(admin_router)
     dp.include_router(profile_router)
+    dp.include_router(rating_router)
     dp.include_router(weather_router)
     dp.include_router(reminders_router)
     dp.include_router(auth_router)

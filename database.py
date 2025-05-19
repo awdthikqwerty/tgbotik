@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from config import DATABASE_PATH, IMAGES_DIR
 from pathlib import Path
 import pytz
+import random
 
 logger = logging.getLogger(__name__)
 
@@ -59,6 +60,16 @@ class Database:
                 until INTEGER,
                 reason TEXT,
                 FOREIGN KEY(user_id) REFERENCES users(id)
+            )
+        ''')
+        self.cur.execute('''
+            CREATE TABLE IF NOT EXISTS user_activity (
+                user_id INTEGER PRIMARY KEY,
+                username TEXT,
+                reminders_count INTEGER DEFAULT 0,
+                photos_uploaded INTEGER DEFAULT 0,
+                weather_checks INTEGER DEFAULT 0,
+                total_activity INTEGER DEFAULT 0
             )
         ''')
         self.conn.commit()
@@ -146,39 +157,61 @@ class Database:
         user_dir.mkdir(exist_ok=True)
         return user_dir
 
-    def count_user_photos(self, telegram_id: int) -> int:
-        user_dir = self.get_user_photo_dir(telegram_id)
-        return len([f for f in user_dir.iterdir() if f.is_file() and f.suffix in ['.jpg', '.jpeg', '.png']])
-
-    def get_user_photos(self, telegram_id: int) -> list:
-        user_dir = self.get_user_photo_dir(telegram_id)
-        photos = sorted([f for f in user_dir.iterdir() if f.is_file() and f.suffix in ['.jpg', '.jpeg', '.png']],
-                        key=lambda x: int(x.stem) if x.stem.isdigit() else 0)
-        return photos
-
     def save_user_photo(self, telegram_id: int, file_bytes: bytes) -> str:
         user_dir = self.get_user_photo_dir(telegram_id)
-        photos = self.get_user_photos(telegram_id)
-        next_num = len(photos) + 1
-        if next_num > 3:
+        photos = self.get_user_photos(telegram_id, only_active=True)
+        if len(photos) >= 3:
             return None
-        filename = user_dir / f"{next_num}.jpg"
-        with open(filename, "wb") as f:
-            f.write(file_bytes)
-        return str(filename)
+        # Генерируем уникальное имя (до 5 цифр)
+        for _ in range(10):
+            rand_num = random.randint(10000, 99999)
+            filename = user_dir / f"{rand_num}.jpg"
+            if not filename.exists():
+                with open(filename, "wb") as f:
+                    f.write(file_bytes)
+                return str(filename)
+        return None  # Если не удалось подобрать имя
 
-    def delete_user_photo(self, telegram_id: int, number: int) -> bool:
+    def get_user_photos(self, telegram_id: int, only_active=True) -> list:
         user_dir = self.get_user_photo_dir(telegram_id)
-        photo_path = user_dir / f"{number}.jpg"
-        if photo_path.exists():
-            photo_path.unlink()
-            # Сдвигаем остальные фото
-            for i in range(number + 1, 4):
-                next_photo = user_dir / f"{i}.jpg"
-                if next_photo.exists():
-                    next_photo.rename(user_dir / f"{i-1}.jpg")
+        if only_active:
+            # Только не удалённые (не начинаются с delete)
+            photos = sorted([
+                f for f in user_dir.iterdir()
+                if f.is_file() and f.suffix in ['.jpg', '.jpeg', '.png'] and not f.stem.startswith('delete')
+            ], key=lambda x: x.stat().st_mtime)
+        else:
+            # Все фото
+            photos = sorted([
+                f for f in user_dir.iterdir()
+                if f.is_file() and f.suffix in ['.jpg', '.jpeg', '.png']
+            ], key=lambda x: x.stat().st_mtime)
+        return photos
+
+    def delete_user_photo(self, telegram_id: int, idx: int) -> bool:
+        """
+        idx — порядковый номер фото (0, 1, 2 ...)
+        """
+        user_dir = self.get_user_photo_dir(telegram_id)
+        photos = self.get_user_photos(telegram_id, only_active=True)
+        if idx < 0 or idx >= len(photos):
+            return False
+        photo_path = photos[idx]
+        # Найти следующий свободный номер для deleteN.jpg
+        n = 1
+        while True:
+            deleted_path = user_dir / f"delete{n}.jpg"
+            if not deleted_path.exists():
+                break
+            n += 1
+        try:
+            photo_path.rename(deleted_path)
             return True
-        return False
+        except Exception:
+            return False
+
+    def count_user_photos(self, telegram_id: int) -> int:
+        return len(self.get_user_photos(telegram_id, only_active=True))
 
     # Методы для фоновых задач
     def get_pending_reminders(self) -> list:
@@ -273,3 +306,27 @@ class Database:
     def count_reminders(self):
         self.cur.execute("SELECT COUNT(*) FROM reminders")
         return self.cur.fetchone()[0]
+
+    def ensure_user_activity(self, user_id: int, username: str):
+        self.cur.execute(
+            "INSERT OR IGNORE INTO user_activity (user_id, username) VALUES (?, ?)",
+            (user_id, username)
+        )
+        self.conn.commit()
+
+    def inc_activity(self, user_id: int, username: str, field: str):
+        self.ensure_user_activity(user_id, username)
+        self.cur.execute(
+            f"UPDATE user_activity SET {field} = {field} + 1, total_activity = reminders_count + photos_uploaded + weather_checks WHERE user_id = ?",
+            (user_id,)
+        )
+        self.conn.commit()
+
+    def get_top_users(self, limit=10):
+        self.cur.execute('''
+            SELECT username, reminders_count, photos_uploaded, weather_checks, total_activity
+            FROM user_activity
+            ORDER BY total_activity DESC
+            LIMIT ?
+        ''', (limit,))
+        return self.cur.fetchall()

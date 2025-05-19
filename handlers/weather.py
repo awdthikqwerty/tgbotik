@@ -105,6 +105,11 @@ async def show_weather(message: types.Message):
         from keyboards.auth_menu import auth_menu_keyboard
         await message.answer("❌ Сначала войдите в систему!", reply_markup=auth_menu_keyboard())
         return
+    from database import Database
+    db = Database()
+    user = db.get_user_by_telegram_id(message.from_user.id)
+    if user:
+        db.inc_activity(user['id'], user['name'], "weather_checks")  # <--- добавили
     await message.answer(get_weather())
 
 @weather_router.message(F.text == "🌤️ Погода на завтра")
@@ -121,11 +126,6 @@ async def show_tomorrow_weather(message: types.Message):
 
 @weather_router.callback_query(F.data.startswith("weather_hour_"))
 async def show_weather_for_hour(callback: types.CallbackQuery):
-    if not is_logged_in(callback.message):
-        from keyboards.auth_menu import auth_menu_keyboard
-        await callback.message.answer("❌ Сначала войдите в систему!", reply_markup=auth_menu_keyboard())
-        await callback.answer()
-        return
     hour_str = callback.data.replace("weather_hour_", "")
     text = get_weather_for_hour(CITY_ID, hour_str)
     await callback.message.answer(text)

@@ -134,39 +134,11 @@ async def handle_photo(message: Message):
     file_bytes = file_bytes.read()
     saved = db.save_user_photo(message.from_user.id, file_bytes)
     if saved:
+        db.inc_activity(user['id'], user['name'], "photos_uploaded")
         db.log_action(user['id'], "Загружено фото профиля")
         await message.answer(f"✅ Фото сохранено.")
     else:
         await message.answer("❌ Не удалось сохранить фото.")
-
-@profile_router.callback_query(F.data == "delete_photo")
-async def delete_photo(callback: types.CallbackQuery):
-    if await check_mute(callback.message):
-        return
-    photos = db.get_user_photos(callback.from_user.id)
-    if not photos:
-        await callback.answer("⚠️ Нет фото для удаления")
-        return
-
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"Фото {idx+1}", callback_data=f"delete_{idx+1}")]
-        for idx in range(len(photos))
-    ])
-    await callback.message.answer("Выберите фото для удаления:", reply_markup=keyboard)
-
-@profile_router.callback_query(F.data.startswith("delete_"))
-async def confirm_delete(callback: types.CallbackQuery):
-    if await check_mute(callback.message):
-        return
-    user = db.get_user_by_telegram_id(callback.from_user.id)
-    number = int(callback.data.split("_", 1)[1])
-    if db.delete_user_photo(callback.from_user.id, number):
-        if user:
-            db.log_action(user['id'], f"Удалено фото №{number}")
-        await callback.message.answer(f"✅ Фото {number} удалено")
-    else:
-        await callback.message.answer("⚠️ Ошибка удаления")
-    await callback.answer()
 
 @profile_router.message(F.text == "Выйти")
 async def logout_user(message: Message):
@@ -200,21 +172,39 @@ async def ask_which_photo_delete(message: Message):
         await message.answer("❌ Сначала войдите в систему!")
         return
 
-    photos = db.get_user_photos(message.from_user.id)
+    photos = db.get_user_photos(message.from_user.id, only_active=True)
     if not photos:
         await message.answer("⚠️ Нет фото для удаления")
         return
 
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"Фото {idx+1}", callback_data=f"delete_{idx+1}")]
-        for idx in range(len(photos))
-    ])
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text=f"Фото {idx+1}", callback_data=f"delete_photo_{idx}")]
+            for idx in range(len(photos))
+        ]
+    )
     await message.answer("Выберите фото для удаления:", reply_markup=keyboard)
 
-@profile_router.message(F.text == "⬅️ В меню")
-async def back_to_main_menu(message: Message):
-    if await check_mute(message):
+@profile_router.callback_query(F.data.startswith("delete_photo_"))
+async def delete_photo_by_index(callback: CallbackQuery):
+    if await check_mute(callback.message):
         return
-    user = db.get_user_by_telegram_id(message.from_user.id)
-    is_admin = user and user.get('telegram_id') in ADMIN_IDS
-    await message.answer("🏠 Главное меню", reply_markup=main_menu_keyboard(is_admin=is_admin))
+    user = db.get_user_by_telegram_id(callback.from_user.id)
+    if not user or not user.get('is_logged_in'):
+        await callback.message.answer("❌ Сначала войдите в систему!")
+        await callback.answer()
+        return
+
+    try:
+        idx = int(callback.data.split("_")[-1])
+    except Exception:
+        await callback.message.answer("⚠️ Ошибка удаления (неверный индекс)")
+        await callback.answer()
+        return
+
+    if db.delete_user_photo(callback.from_user.id, idx):
+        db.log_action(user['id'], f"Удалено фото №{idx+1}")
+        await callback.message.answer(f"✅ Фото {idx+1} удалено")
+    else:
+        await callback.message.answer("⚠️ Ошибка удаления")
+    await callback.answer()

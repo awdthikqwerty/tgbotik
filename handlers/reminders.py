@@ -99,6 +99,7 @@ async def process_reminder_repeat(message: Message, state: FSMContext):
         description=data['description'],
         repeat=repeat
     )
+    db.inc_activity(user['id'], user['name'], "reminders_count")  # <--- добавили
     db.log_action(user['id'], f"Создано напоминание #{reminder_id}")
     await message.answer(f"✅ Напоминание #{reminder_id} создано!")
     await state.clear()
