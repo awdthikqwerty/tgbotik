@@ -1,0 +1,26 @@
+{
+  "_doc": "Anchors resolved by scripts/build-timing.mjs into src/timing.json. Syntax: zero | end | segNN@start | segNN@end | segNN@word:K, optional +/- seconds suffix.",
+  "events": {
+    "crack": "seg01@word:10-0.15",
+    "turbStart": "seg02@start-0.2",
+    "grab": "seg02@word:3",
+    "windowLook": "seg02@word:7",
+    "wingBend": "seg02@word:12",
+    "hypoStart": "seg03@start",
+    "wingBreak": "seg03@word:9+0.1",
+    "physicsStart": "seg04@start",
+    "lossOfLift": "seg04@word:4",
+    "imbalance": "seg05@start",
+    "rollStart": "seg06@start",
+    "pilots": "seg06@word:4",
+    "catastrophe": "seg07@start",
+    "turn": "seg08@start",
+    "rigStart": "seg08@start",
+    "bendTest": "seg09@start",
+    "loads": "seg10@start",
+    "calmReturn": "seg11@start",
+    "finale": "seg12@start",
+    "titleCard": "seg12@end-0.5",
+    "end": "end"
+  }
+}
