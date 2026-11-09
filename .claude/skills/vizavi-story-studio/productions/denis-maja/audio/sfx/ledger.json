@@ -1,0 +1,83 @@
+{
+ "start": 2552,
+ "items": {
+  "fireworks_bed": {
+   "dur": 10,
+   "est": 100
+  },
+  "fireworks_big": {
+   "dur": 5,
+   "est": 50
+  },
+  "phone_vibrate": {
+   "dur": 1.2,
+   "est": 12
+  },
+  "message_sent": {
+   "dur": 0.6,
+   "est": 6
+  },
+  "message_ding": {
+   "dur": 0.8,
+   "est": 8
+  },
+  "gasp": {
+   "dur": 0.8,
+   "est": 8
+  },
+  "breath": {
+   "dur": 1.5,
+   "est": 15
+  },
+  "dog_bark": {
+   "dur": 1,
+   "est": 10
+  },
+  "sea_waves": {
+   "dur": 3,
+   "est": 30
+  },
+  "birds_winter": {
+   "dur": 9,
+   "est": 90
+  },
+  "footsteps_snow": {
+   "dur": 3,
+   "est": 30
+  },
+  "birds_summer": {
+   "dur": 3,
+   "est": 30
+  },
+  "footsteps_walk": {
+   "dur": 3,
+   "est": 30
+  },
+  "flowers_rustle": {
+   "dur": 1,
+   "est": 10
+  },
+  "kiss": {
+   "dur": 0.5,
+   "est": 5
+  },
+  "key_tap": {
+   "dur": 2,
+   "est": 24
+  },
+  "transition": {
+   "dur": 1.5,
+   "est": 18
+  },
+  "whoosh_soft": {
+   "dur": 0.8,
+   "est": 10
+  },
+  "sparkle": {
+   "dur": 2,
+   "est": 24
+  }
+ },
+ "end": 3049,
+ "spent": 497
+}
