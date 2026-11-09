@@ -1,0 +1,54 @@
+{
+ "key": "e8a5d8a65ced4bce17e3404e3c506ba95bfa66f48cf9dd476332ddb53bdfbe90",
+ "provider": "elevenlabs",
+ "speaker": "denis",
+ "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+ "voiceName": "Liam (premade, verified PL)",
+ "model": "eleven_multilingual_v2",
+ "language": "pl",
+ "text": "Cześć, Maja!",
+ "alignment": {
+  "characters": [
+   "C",
+   "z",
+   "e",
+   "ś",
+   "ć",
+   ",",
+   " ",
+   "M",
+   "a",
+   "j",
+   "a",
+   "!"
+  ],
+  "character_start_times_seconds": [
+   0,
+   0.116,
+   0.174,
+   0.255,
+   0.313,
+   0.395,
+   0.43,
+   0.488,
+   0.546,
+   0.627,
+   0.697,
+   0.813
+  ],
+  "character_end_times_seconds": [
+   0.116,
+   0.174,
+   0.255,
+   0.313,
+   0.395,
+   0.43,
+   0.488,
+   0.546,
+   0.627,
+   0.697,
+   0.813,
+   1.161
+  ]
+ }
+}
