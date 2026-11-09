@@ -1,0 +1,54 @@
+{
+ "key": "cb4da2d8b457cc342d5c45b778c62f64358d28ce134df44796390c35a61519cf",
+ "provider": "elevenlabs",
+ "speaker": "denis",
+ "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+ "voiceName": "Liam (premade, verified PL)",
+ "model": "eleven_v3",
+ "language": "pl",
+ "text": "[shy] Cześć…",
+ "alignment": {
+  "characters": [
+   "[",
+   "s",
+   "h",
+   "y",
+   "]",
+   " ",
+   "C",
+   "z",
+   "e",
+   "ś",
+   "ć",
+   "…"
+  ],
+  "character_start_times_seconds": [
+   0,
+   0.08,
+   0.09,
+   0.1,
+   0.12,
+   0.14,
+   0.15,
+   0.16,
+   0.32,
+   0.48,
+   0.68,
+   0.88
+  ],
+  "character_end_times_seconds": [
+   0.08,
+   0.09,
+   0.1,
+   0.12,
+   0.14,
+   0.15,
+   0.16,
+   0.32,
+   0.48,
+   0.68,
+   0.88,
+   1.04
+  ]
+ }
+}

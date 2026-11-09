@@ -1,0 +1,24 @@
+{
+  "voices": {
+    "narrator": { "voiceId": "JBFqnCBsd6RMkjVDRZzb", "name": "George (premade)", "model": "eleven_v3", "settings": { "stability": 0.5, "similarity_boost": 0.8 } },
+    "denis":    { "voiceId": "TX3LPaxmHKxFdv7VOQHJ", "name": "Liam (premade, verified PL)", "model": "eleven_v3", "settings": { "stability": 0.5, "similarity_boost": 0.8 } },
+    "maja":     { "voiceId": "cgSgspJ2msm6clMCkdW9", "name": "Jessica (premade)", "model": "eleven_v3", "settings": { "stability": 0.5, "similarity_boost": 0.8 } }
+  },
+  "lines": [
+    { "id": "n1", "speaker": "narrator", "text": "[warm, gentle] Czasami najpiękniejsze historie zaczynają się od jednej, małej wiadomości…" },
+    { "id": "d1", "speaker": "denis", "text": "[nervous, quietly] Hej… chciałbym zapytać… czy chciałabyś ze mną być?" },
+    { "id": "d2", "speaker": "denis", "text": "[sighs] Nie… to głupio brzmi." },
+    { "id": "d3", "speaker": "denis", "text": "[takes a deep breath] Dobra. Wysyłam." },
+    { "id": "m1", "speaker": "maja", "text": "[surprised] O Boże… Denis?" },
+    { "id": "m2", "speaker": "maja", "text": "[happy, excited] Tak! Też tego chcę!" },
+    { "id": "d4", "speaker": "denis", "text": "[overjoyed] Zgodziła się!" },
+    { "id": "n2", "speaker": "narrator", "text": "[warm] I tak, wśród noworocznych świateł, rozpoczęła się ich wspólna historia." },
+    { "id": "d5", "speaker": "denis", "text": "[shy] Cześć…" },
+    { "id": "m3", "speaker": "maja", "text": "[shy, smiling] Cześć." },
+    { "id": "n3", "speaker": "narrator", "text": "[warm] Czwartego stycznia spotkali się po raz pierwszy. Nie wiedzieli jeszcze, ile pięknych chwil na nich czeka." },
+    { "id": "n4", "speaker": "narrator", "text": "[warm, smiling] Przez kolejne miesiące zbierali wspomnienia. Były kwiaty, wspólne filmy, wakacje, spacery, muzyka i mnóstwo śmiechu. A najpiękniejsze było to, że mogli przeżywać to wszystko razem." },
+    { "id": "m4", "speaker": "maja", "text": "[laughing] Hahaha… Czekaj, mały!" },
+    { "id": "m5", "speaker": "maja", "text": "[moved, softly] Są piękne… Dziękuję." },
+    { "id": "n5", "speaker": "narrator", "text": "[gentle, moved] Od jednej nieśmiałej wiadomości do setek wspólnych wspomnień. Minął prawie rok, a ich historia wciąż trwa. Bo czasami wystarczy jedno „wyślij”, żeby rozpoczęło się coś naprawdę pięknego." }
+  ]
+}
