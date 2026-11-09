@@ -8,7 +8,7 @@ import { fuselageGeometry, makeWingGeometry, fillWing, WING, WingParams, toon, i
 export type Vec3 = [number, number, number];
 export type CamState = { pos: Vec3; look: Vec3; fov?: number; roll?: number; shake?: number; seed?: number; t?: number };
 
-const SUB_SHIFT = 150; // image content moves up so the subtitle band stays clear of the subject
+const SUB_SHIFT = 0; // image content moves up so the subtitle band stays clear of the subject
 
 /** Drives the R3F camera from a pure state object every render. */
 export const Cam: React.FC<CamState> = ({ pos, look, fov = 50, roll = 0, shake = 0, seed = 0, t = 0 }) => {
