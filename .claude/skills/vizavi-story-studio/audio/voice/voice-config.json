@@ -1,0 +1,17 @@
+{
+  "defaultProvider": "elevenlabs",
+  "defaultModelId": "eleven_multilingual_v2",
+  "voices": {
+    "narrator": {
+      "ru": { "voiceId": "", "modelId": "eleven_multilingual_v2", "description": "Select after account voice discovery and Russian sample audition." },
+      "en": { "voiceId": "", "modelId": "eleven_multilingual_v2", "description": "Select after account voice discovery and English sample audition." },
+      "pl": { "voiceId": "", "modelId": "eleven_multilingual_v2", "description": "Select after account voice discovery and Polish sample audition." }
+    },
+    "characters": {
+      "example-young": { "language": "ru", "voiceId": "", "modelId": "eleven_multilingual_v2", "settings": { "stability": 0.48, "similarity_boost": 0.78, "style": 0.18, "speed": 1.02 } },
+      "example-elder": { "language": "ru", "voiceId": "", "modelId": "eleven_multilingual_v2", "settings": { "stability": 0.62, "similarity_boost": 0.78, "style": 0.12, "speed": 0.94 } }
+    }
+  },
+  "fallbacks": ["kokoro", "edge-tts"],
+  "note": "Voice IDs are intentionally blank. Discover available voices with scripts/voices.mjs and select after auditioning target-language samples."
+}

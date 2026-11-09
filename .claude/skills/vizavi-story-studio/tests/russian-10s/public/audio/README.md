@@ -1,0 +1,1 @@
+`npm run voice:test` writes narration.mp3 after an ElevenLabs Russian voice ID is configured. `npm run audio:test` generates original procedural music.wav and sfx.wav. The Remotion composition mixes all three and lowers score volume during narration.

@@ -1,0 +1,9 @@
+{
+  "sampleRate": 48000,
+  "channels": 2,
+  "segments": [],
+  "music": [],
+  "sfx": [],
+  "ducking": { "enabled": true, "speechLookaheadMs": 120, "attackMs": 80, "releaseMs": 300 },
+  "mixTarget": { "integratedLufs": -16, "truePeakDbtp": -1.0 }
+}
