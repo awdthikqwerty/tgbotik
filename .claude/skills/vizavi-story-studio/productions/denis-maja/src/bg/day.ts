@@ -1,0 +1,10 @@
+// Day/sunset scene backgrounds (painted procedurally, cached static layers + light animated overlays).
+import type { Background } from "../lib/types";
+import { park } from "./day-park";
+const flat = (c: string): Background => ({
+  draw: (g) => { g.fillStyle = c; g.fillRect(-200, -320, 1480, 2560); },
+  groundY: 1500, light: { key: "#ffd9a8", keyDir: 1, ambient: "#7a6a9a", rim: "#ffc0a0", strength: 0.3 },
+});
+export const DAY: Record<string, Background> = {
+  park, flowers: flat("#f6d6e4"), sea: flat("#f7b98f"), dog: flat("#bfe3b4"), everyday: flat("#f5b48a"), finale: flat("#f0a487"),
+};
