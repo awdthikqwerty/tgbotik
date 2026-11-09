@@ -1,0 +1,8 @@
+{
+  "durationSeconds": 10,
+  "provider": "elevenlabs",
+  "narration": {"text":"Когда звезда запуталась в облаке, Мира подняла фонарь. Но путь домой ей осветил собственный свет.","language":"ru","speaker":"narrator-ru","settings":{"stability":0.55,"similarity_boost":0.8,"style":0.16,"speed":1.0}},
+  "music": [{"start":0,"end":10,"description":"Original delicate cinematic orchestral cue: celesta, soft strings, warm resolution; no recognizable melody."}],
+  "sfx": [{"at":0.4,"description":"gentle night breeze through meadow"},{"at":3.1,"description":"small lantern glass chime"},{"at":7.0,"description":"soft star sparkle and airy rising shimmer"}],
+  "notes":"Music/SFX must be original or licensed. Duck music under narration; master with headroom. This file is a cue plan, not generated audio."
+}

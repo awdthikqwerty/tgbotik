@@ -1,0 +1,40 @@
+{
+  "name": "vizavi-story-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "voices": "node scripts/voices.mjs",
+    "references": "node scripts/reference-index.mjs",
+    "voice:test": "node tests/russian-10s/generate-voice.mjs",
+    "audio:test": "node tests/russian-10s/generate-cues.mjs",
+    "render:test": "remotion render tests/russian-10s/entry.ts RussianTenSecondShort tests/russian-10s/out/russian-10s.mp4 --public-dir tests/russian-10s/public --gl=swangle",
+    "qa:test": "python3 templates/scripts/short_qa.py tests/russian-10s/out/russian-10s.mp4 tests/russian-10s/out/qa",
+    "studio": "remotion studio",
+    "check": "node scripts/check-skill-integrity.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@react-three/postprocessing": "3.2.2",
+    "@remotion/bundler": "4.0.542",
+    "@remotion/cli": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "@remotion/three": "4.0.542",
+    "postprocessing": "6.39.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.542",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/three": "0.187.0",
+    "typescript": "7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}
