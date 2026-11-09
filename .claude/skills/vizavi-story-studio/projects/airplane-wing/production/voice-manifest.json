@@ -1,0 +1,187 @@
+{
+  "provider": "elevenlabs",
+  "voiceId": "PoeEsLRfhERoseiWpFdi",
+  "modelId": "eleven_multilingual_v2",
+  "segments": [
+    {
+      "id": "seg01",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "tense",
+      "settings": {
+        "stability": 0.34,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "speed": 1.06
+      },
+      "requestId": "waOT8BA070ks9X1vZmGF",
+      "cacheHit": false
+    },
+    {
+      "id": "seg02",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "tense",
+      "settings": {
+        "stability": 0.34,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "speed": 1.06
+      },
+      "requestId": "bjL4XXyME2e03uQWEVj1",
+      "cacheHit": false
+    },
+    {
+      "id": "seg03",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "tense",
+      "settings": {
+        "stability": 0.34,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "speed": 1.06
+      },
+      "requestId": "w8nbB3GadiwNo1Elfmql",
+      "cacheHit": false
+    },
+    {
+      "id": "seg04",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "explain",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.85,
+        "style": 0.3,
+        "speed": 1.03
+      },
+      "requestId": "AuzBJuayE53oGTzI5DQZ",
+      "cacheHit": false
+    },
+    {
+      "id": "seg05",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "explain",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.85,
+        "style": 0.3,
+        "speed": 1.03
+      },
+      "requestId": "iQSBCLQRQKvFZuI9EML0",
+      "cacheHit": false
+    },
+    {
+      "id": "seg06",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "tense",
+      "settings": {
+        "stability": 0.34,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "speed": 1.06
+      },
+      "requestId": "k1JcNKV3J65wb3hsA69n",
+      "cacheHit": false
+    },
+    {
+      "id": "seg07",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "tense",
+      "settings": {
+        "stability": 0.34,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "speed": 1.06
+      },
+      "requestId": "WBEOTcdRpASylTAWgqam",
+      "cacheHit": false
+    },
+    {
+      "id": "seg08",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "turn",
+      "settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.85,
+        "style": 0.4,
+        "speed": 1
+      },
+      "requestId": "2TeMTvMCr4z0epqOBEFM",
+      "cacheHit": false
+    },
+    {
+      "id": "seg09",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "explain",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.85,
+        "style": 0.3,
+        "speed": 1.03
+      },
+      "requestId": "E3XanyBkziJLjcLzcIAL",
+      "cacheHit": false
+    },
+    {
+      "id": "seg10",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "explain",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.85,
+        "style": 0.3,
+        "speed": 1.03
+      },
+      "requestId": "vRE2FesvQt8Azo8YIq0Q",
+      "cacheHit": false
+    },
+    {
+      "id": "seg11",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "calm",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.85,
+        "style": 0.2,
+        "speed": 1
+      },
+      "requestId": "Uk8HUqPcLuGlGZT2GYpU",
+      "cacheHit": false
+    },
+    {
+      "id": "seg12",
+      "provider": "elevenlabs",
+      "voiceId": "PoeEsLRfhERoseiWpFdi",
+      "modelId": "eleven_multilingual_v2",
+      "mood": "calm",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.85,
+        "style": 0.2,
+        "speed": 1
+      },
+      "requestId": "AUDdfHpsFB0hkqfV7i8P",
+      "cacheHit": false
+    }
+  ]
+}

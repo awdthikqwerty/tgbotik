@@ -1,0 +1,47 @@
+{
+  "fps": 30, "width": 1080, "height": 1920,
+  "scenes": [
+    { "id": "S1", "name": "Полёт", "from": "zero", "to": "seg01@end+0.45",
+      "shots": [
+        { "id": "s1a", "w": 2.3, "set": "exterior", "transition": "cut", "note": "Establishing: пассажирский самолёт над облаками, камера идёт рядом, подпись высоты" },
+        { "id": "s1b", "w": 2.0, "set": "cabin", "transition": "whip", "note": "Макс у окна, спокойно смотрит на облака" },
+        { "id": "s1c", "w": 1.9, "set": "cabin", "transition": "cut", "note": "Металлический треск, резкий наезд на лицо" }
+      ] },
+    { "id": "S2", "name": "Турбулентность", "from": "seg02@start-0.45", "to": "seg02@end+0.45",
+      "shots": [
+        { "id": "s2a", "w": 2.6, "set": "cabin", "transition": "flash", "note": "Салон трясёт, пассажиры хватаются за кресла" },
+        { "id": "s2b", "w": 3.0, "set": "cabin", "transition": "whip", "note": "Через плечо Макса: крыло в окне изгибается" },
+        { "id": "s2c", "w": 1.5, "set": "cabin", "transition": "cut", "note": "Крупный план реакции Макса" },
+        { "id": "s2d", "w": 2.6, "set": "exterior", "transition": "whip", "note": "Снаружи: крыло сильно изгибается" }
+      ] },
+    { "id": "S3", "name": "Гипотетический сценарий", "from": "seg03@start-0.45", "to": "seg03@end+0.5",
+      "shots": [
+        { "id": "s3a", "w": 2.7, "set": "hypo", "transition": "glitch", "note": "Иллюстрация гипотезы: орбита вокруг корня крыла в замедлении" },
+        { "id": "s3b", "w": 2.5, "set": "hypo", "transition": "cut", "note": "Крыло отрывается, обломки, вращение камеры" }
+      ] },
+    { "id": "S4", "name": "Физика", "from": "seg04@start-0.5", "to": "seg07@end+0.7",
+      "shots": [
+        { "id": "s4a", "w": 3.0, "set": "tech", "transition": "glitch", "note": "Техническая 3D-схема: подъёмная сила на обоих крыльях" },
+        { "id": "s4b", "w": 3.0, "set": "tech", "transition": "cut", "note": "Одна сторона теряет подъёмную силу" },
+        { "id": "s4c", "w": 3.6, "set": "tech", "transition": "cut", "note": "Дисбаланс и резкий крен" },
+        { "id": "s4d", "w": 3.3, "set": "cockpit", "transition": "whip", "note": "Пилоты не справляются с управлением" },
+        { "id": "s4e", "w": 3.6, "set": "hypo", "transition": "flash", "note": "Катастрофическое повреждение, гипотетический план с дальней дистанции" },
+        { "id": "s4f", "w": 3.0, "set": "tech", "transition": "cut", "note": "Табличка: не следствие обычной турбулентности" }
+      ] },
+    { "id": "S5", "name": "Прочность крыла", "from": "seg08@start-0.4", "to": "seg10@end+0.45",
+      "shots": [
+        { "id": "s5a", "w": 2.0, "set": "rig", "transition": "iris", "note": "Резкий переход: инженерный испытательный стенд" },
+        { "id": "s5b", "w": 3.2, "set": "rig", "transition": "cut", "note": "Крыло плавно изгибается под нагрузкой" },
+        { "id": "s5c", "w": 3.0, "set": "rig", "transition": "whip", "note": "Крупный план корня крыла, замедление" },
+        { "id": "s5d", "w": 3.0, "set": "rig", "transition": "cut", "note": "Распределение нагрузки по размаху" },
+        { "id": "s5e", "w": 2.6, "set": "rig", "transition": "whip", "note": "Инженеры наблюдают, датчики" }
+      ] },
+    { "id": "S6", "name": "Финал", "from": "seg11@start-0.45", "to": "end",
+      "shots": [
+        { "id": "s6a", "w": 2.4, "set": "cabin", "transition": "iris", "note": "Макс спокойно смотрит в окно, крыло мягко качается" },
+        { "id": "s6b", "w": 2.6, "set": "exterior", "transition": "whip", "note": "Мягкая работа крыла в турбулентности снаружи" },
+        { "id": "s6c", "w": 2.0, "set": "cabin", "transition": "cut", "note": "Макс улыбается" },
+        { "id": "s6d", "w": 4.4, "set": "exterior", "transition": "whip", "note": "Отъезд камеры над облаками, финальный титр" }
+      ] }
+  ]
+}
