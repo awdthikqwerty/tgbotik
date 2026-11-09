@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-11-07T23:41:49.513Z",
+  "imageCount": 21,
+  "videoCount": 0,
+  "visualStyleAnalysisRequired": true,
+  "references": [
+    {
+      "path": "references/frames/example(1).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 250443
+    },
+    {
+      "path": "references/frames/example(10).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 248673
+    },
+    {
+      "path": "references/frames/example(11).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 80218
+    },
+    {
+      "path": "references/frames/example(12).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 73829
+    },
+    {
+      "path": "references/frames/example(13).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 44642
+    },
+    {
+      "path": "references/frames/example(14).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 62728
+    },
+    {
+      "path": "references/frames/example(15).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 51657
+    },
+    {
+      "path": "references/frames/example(16).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 114979
+    },
+    {
+      "path": "references/frames/example(2).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 172710
+    },
+    {
+      "path": "references/frames/example(3).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 201077
+    },
+    {
+      "path": "references/frames/example(4).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 236083
+    },
+    {
+      "path": "references/frames/example(5).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 209355
+    },
+    {
+      "path": "references/frames/example(6).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 202134
+    },
+    {
+      "path": "references/frames/example(7).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 305690
+    },
+    {
+      "path": "references/frames/example(8).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 291175
+    },
+    {
+      "path": "references/frames/example(9).jpg",
+      "source": "frames",
+      "kind": "image",
+      "bytes": 262255
+    },
+    {
+      "path": "references/sheets/short02_sheet.jpg",
+      "source": "sheets",
+      "kind": "image",
+      "bytes": 882210
+    },
+    {
+      "path": "references/sheets/short03_sheet.jpg",
+      "source": "sheets",
+      "kind": "image",
+      "bytes": 801203
+    },
+    {
+      "path": "references/sheets/short04_sheet.jpg",
+      "source": "sheets",
+      "kind": "image",
+      "bytes": 703624
+    },
+    {
+      "path": "references/sheets/short08_sheet.jpg",
+      "source": "sheets",
+      "kind": "image",
+      "bytes": 836973
+    },
+    {
+      "path": "references/sheets/short15_sheet.jpg",
+      "source": "sheets",
+      "kind": "image",
+      "bytes": 625254
+    }
+  ]
+}

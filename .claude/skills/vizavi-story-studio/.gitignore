@@ -1,0 +1,4 @@
+node_modules/
+.env
+out/
+tests/russian-10s/public/audio/*.mp3

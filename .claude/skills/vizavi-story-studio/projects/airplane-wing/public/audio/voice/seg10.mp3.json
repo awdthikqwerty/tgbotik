@@ -1,0 +1,11 @@
+{
+  "provider": "elevenlabs",
+  "cacheKey": "5233c6429f346d0b7007d38134848915b5b12d6786137547d2faa16a424d39e1",
+  "voiceId": "PoeEsLRfhERoseiWpFdi",
+  "modelId": "eleven_multilingual_v2",
+  "language": "ru",
+  "outputFormat": "mp3_44100_128",
+  "requestId": "vRE2FesvQt8Azo8YIq0Q",
+  "generatedAt": "2026-11-09T15:02:55.386Z",
+  "alignmentPath": "seg10.mp3.alignment.json"
+}
