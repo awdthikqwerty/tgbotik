@@ -1,0 +1,15 @@
+{
+  "title": "Мини-сказка: Храброе сердце",
+  "mode": "mini-short",
+  "durationSeconds": 10,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "visualStyle": "cartoon-3d",
+  "narrationLanguage": "ru",
+  "subtitleLanguage": "ru",
+  "dialogueLanguages": {
+    "knight": "ru",
+    "dragon": "ru"
+  }
+}
