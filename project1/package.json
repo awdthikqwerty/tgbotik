@@ -1,0 +1,29 @@
+{
+  "name": "project1-denis-maja",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Denis i Maja: romantic 9:16 animated short (Polish). Built with the vizavi-story-studio skill.",
+  "scripts": {
+    "timeline": "node tools/build-timeline.mjs 1.18",
+    "music": "cd audio && python3 score.py",
+    "mix": "cd audio && python3 mix.py",
+    "studio": "remotion studio src/index.ts --public-dir public",
+    "render": "remotion render src/index.ts Film out/denis-maja-v1.mp4 --public-dir public --gl=swangle --concurrency=4 --crf=16 --audio-codec=aac --audio-bitrate=256k",
+    "qa": "python3 ../.claude/skills/vizavi-story-studio/templates/scripts/short_qa.py out/denis-maja-v1.mp4 out/qa",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.542",
+    "@remotion/cli": "4.0.542",
+    "@remotion/google-fonts": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.542"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

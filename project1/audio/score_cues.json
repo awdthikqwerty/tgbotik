@@ -1,0 +1,97 @@
+{
+ "key": "D major / B minor",
+ "cues": [
+  [
+   0.0,
+   "sky: Bm(add9) pad fades in, deep piano B, celesta motif F#-E-D-A (the 'message' motif)"
+  ],
+  [
+   4.65,
+   "room: soft piano heartbeat pulse in eighths (86.6 bpm), Gadd9 -> Asus4 -> Bm(add11) -> Csus2, crescendo"
+  ],
+  [
+   9.126,
+   "pulse falters (2 eighths dropped) while he deletes the message"
+  ],
+  [
+   11.576,
+   "SEND: the tension releases - soft D(add9) chord, celesta A5-D6, long hall tail"
+  ],
+  [
+   12.126,
+   "maja: warm D/F# pad, harp-like pluck arpeggio; thins on the buzz"
+  ],
+  [
+   13.626,
+   "surprise: celesta glint A5-B5-D6"
+  ],
+  [
+   14.426,
+   "smile: Gmaj7 swells in"
+  ],
+  [
+   15.356,
+   "'Tak!': bright lift - D major bloom, glock D6/F#6, rising piano arpeggio, pulse at 81 bpm"
+  ],
+  [
+   18.746,
+   "Denis reads: strings swell under 'Zgodziła się! Tak!', glock run up into the city downbeat"
+  ],
+  [
+   21.257,
+   "city: MAIN THEME (piano melody + octave + celesta), D - A/C# - Bm7, 89.3 bpm, wide strings"
+  ],
+  [
+   22.857,
+   "heart firework: glock/celesta sparkle F#6-A6-D7 + triangle"
+  ],
+  [
+   25.289,
+   "park: tender solo piano broken chords Gmaj7 - D/F# - Em7 - Asus4/A (74.2 bpm), light strings from 2nd chord"
+  ],
+  [
+   31.756,
+   "memories: montage groove (soft kick, snaps, shaker, pizzicato bass, offbeat piano), one chord per vignette, tempo 55-195 bpm locked so each vignette starts on a beat"
+  ],
+  [
+   31.756,
+   "vignette 'flowers': accent (glock + triangle), chord D, celesta arpeggio"
+  ],
+  [
+   35.007,
+   "vignette 'film': accent (glock + triangle), chord A/C#, celesta arpeggio"
+  ],
+  [
+   36.119,
+   "vignette 'sea': accent (glock + triangle), chord Bm7, celesta arpeggio"
+  ],
+  [
+   37.197,
+   "vignette 'dog': accent (glock + triangle), chord Gmaj7, celesta arpeggio"
+  ],
+  [
+   38.866,
+   "vignette 'dance': accent (glock + triangle), chord Em7, celesta arpeggio"
+  ],
+  [
+   40.343,
+   "vignette 'everyday': accent (glock + triangle), chord Asus4, celesta arpeggio"
+  ],
+  [
+   42.643,
+   "finale: theme returns on solo piano (78.1 bpm), strings enter and grow bar by bar"
+  ],
+  [
+   54.931,
+   "CLIMAX on end card 1: G(add9) -> A -> D, melody peaks on D6 (octaves + violins), soft cymbal + timpani"
+  ],
+  [
+   58.003,
+   "resolution: rolled D(add9) chord, strings sustain and fade"
+  ],
+  [
+   59.447,
+   "end card 2: celesta echoes the opening motif F#-E-D-A (the story continues)"
+  ]
+ ]
+}

@@ -172,3 +172,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# project1 keeps its source helpers in src/lib (the Python `lib/` rule above would hide them)
+!project1/src/lib/
